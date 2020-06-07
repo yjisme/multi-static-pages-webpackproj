@@ -5,7 +5,7 @@ const WebpackBundleAnalyzer = require("webpack-bundle-analyzer")
 const CmpressionWebpackPlugin = require("compression-webpack-plugin");
 // webpack的生产环境配置，从基本配置中合并
 // 合并是利用 webpack-merge 完成的： https://github.com/survivejs/webpack-merge
-const devConfig = {
+const prodConfig = {
   mode: "production",
   devtool: "none",
   optimization: {
@@ -21,10 +21,7 @@ const devConfig = {
       },
     },
   },
-  plugins: [
-    new WebpackBundleAnalyzer(),
-    new CmpressionWebpackPlugin(),
-  ],
+  plugins: [new WebpackBundleAnalyzer(), new CmpressionWebpackPlugin()],
 };
 
-module.exports = merge(baseConfig, devConfig);
+module.exports = merge(baseConfig, prodConfig);
