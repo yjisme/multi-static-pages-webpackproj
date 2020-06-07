@@ -1,0 +1,28 @@
+/* 头部的css代码 */
+
+.header-container {
+  color: #fff;
+  background-color: #000;
+  display: flex;
+  height: 60px;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  margin-left: 300px;
+  & img {
+    width: 100px;
+  }
+}
+
+.header-nav{
+  margin-left: 50px;
+  & a{
+    padding: 0 30px;
+    line-height: 60px;
+  }
+}
+.header-nav-active{
+  color: burlywood;
+}
